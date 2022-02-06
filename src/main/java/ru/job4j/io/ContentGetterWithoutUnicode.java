@@ -18,8 +18,8 @@ public class ContentGetterWithoutUnicode implements ContentGetter {
         return getContentWithoutUnicode(predicate);
     }
 
-    public String getContentWithoutUnicode(Predicate<Character> predicate) {
-        StringBuffer output = new StringBuffer();
+    public synchronized String getContentWithoutUnicode(Predicate<Character> predicate) {
+        StringBuilder output = new StringBuilder();
         try (BufferedInputStream bis = new BufferedInputStream(new FileInputStream(file.getFile()))) {
             int data;
             while ((data = bis.read()) > 0) {

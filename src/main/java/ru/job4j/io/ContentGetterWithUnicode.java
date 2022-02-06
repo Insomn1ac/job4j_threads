@@ -12,8 +12,8 @@ public class ContentGetterWithUnicode implements ContentGetter {
     }
 
     @Override
-    public String getContent() {
-        StringBuffer output = new StringBuffer();
+    public synchronized String getContent() {
+        StringBuilder output = new StringBuilder();
         try (BufferedInputStream bis = new BufferedInputStream(new FileInputStream(file.getFile()))) {
             int data;
             while ((data = bis.read()) > 0) {
