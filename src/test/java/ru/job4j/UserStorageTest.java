@@ -56,7 +56,7 @@ public class UserStorageTest {
         Thread thread2 = new Thread(() -> {
             for (int i = 0; i < 3; i++) {
                 try {
-                    Thread.sleep(10);
+                    Thread.sleep(250);
                     storage.delete(storage.getUser(i));
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
