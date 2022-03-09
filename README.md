@@ -1,2 +1,2 @@
-[![Build Status](https://app.travis-ci.com/Insomn1ac/job4j_threads.svg?branch=master)](https://app.travis-ci.com/Insomn1ac/job4j_threads)
+[![Java CI with Maven](https://github.com/Insomn1ac/job4j_threads/actions/workflows/maven.yml/badge.svg)](https://github.com/Insomn1ac/job4j_threads/actions/workflows/maven.yml)
 [![codecov](https://codecov.io/gh/Insomn1ac/job4j_threads/branch/master/graph/badge.svg?token=UJCQLCQ04H)](https://codecov.io/gh/Insomn1ac/job4j_threads)
