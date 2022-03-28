@@ -4,20 +4,20 @@ import ru.job4j.singleton.Item;
 
 public class DCLSingleton {
 
-    private static volatile DCLSingleton INSTANCE;
+    private static volatile DCLSingleton inst;
 
     private DCLSingleton() {
     }
 
     public static DCLSingleton getInstance() {
-        if (INSTANCE == null) {
+        if (inst == null) {
             synchronized (DCLSingleton.class) {
-                if (INSTANCE == null) {
-                    INSTANCE = new DCLSingleton();
+                if (inst == null) {
+                    inst = new DCLSingleton();
                 }
             }
         }
-        return INSTANCE;
+        return inst;
     }
 
     public Item add(Item model) {

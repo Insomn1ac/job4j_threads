@@ -4,16 +4,16 @@ import ru.job4j.singleton.Item;
 
 public class SCLSingleton {
 
-    private static SCLSingleton INSTANCE;
+    private static SCLSingleton inst;
 
     private SCLSingleton() {
     }
 
     public static synchronized SCLSingleton getInstance() {
-        if (INSTANCE == null) {
-            INSTANCE = new SCLSingleton();
+        if (inst == null) {
+            inst = new SCLSingleton();
         }
-        return INSTANCE;
+        return inst;
     }
 
     public Item add(Item model) {
